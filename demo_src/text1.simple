@@ -1,0 +1,19 @@
+program sample
+constant 
+    pi=3.1415926;
+    e=2.71828182;
+var 
+    a : integer;
+    b : integer;
+procedure show(a:char) begin
+	call writeln(a)
+end
+begin
+    a := 1;
+    a := pi + 1;
+    b := e * 100;
+    if a or b then
+		call writeln('a or b is true')
+	else
+		call writeln('all false')
+end
