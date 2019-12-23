@@ -1,9 +1,0 @@
-program sample
-var 
-    a : array[10] of integer;
-    b,c : integer;
-begin
-    for b:=0 to 9 do begin
-        a[b] := 0
-    end
-end

@@ -1,0 +1,10 @@
+let
+    var ans:Integer;
+    const ten = 10;
+    func power(a: Integer, n: Integer): Integer is
+        if n == 0
+        then 1
+        else a * power(a ,n-1)
+
+in
+    ans := power(ten, 5)

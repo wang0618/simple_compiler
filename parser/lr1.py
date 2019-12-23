@@ -22,7 +22,7 @@ class ParseError(Exception):
             "', '".join(self.excepted_symbol), self.token.terminal))
 
 
-def show_tree(trees, symbols, const_string, delay=0, max_symbol_len=12):
+def show_tree(trees, symbols, const_string, delay=0, max_symbol_len=25):
     """
     显示语法分析树
     """
@@ -33,7 +33,7 @@ def show_tree(trees, symbols, const_string, delay=0, max_symbol_len=12):
             print(leaf)
             return
         if name == IDENTIFIER:
-            print('<标识符>', symbols[attr].name)
+            print(IDENTIFIER, symbols[attr].name)
         elif name == CHAR:
             print(const_string[attr])
         else:
@@ -170,5 +170,5 @@ def prase(tokens, trans_tab, productions, terminals, symbol_tab, const_string, s
         elif action == 2:  # 接受
             break
         if show_tree_after_iteration:
-            show_tree(symbols, symbol_tab, const_string, delay=0.06)
+            show_tree(symbols, symbol_tab, const_string, delay=0.1)
     return symbols

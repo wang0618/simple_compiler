@@ -10,7 +10,7 @@ def make_LR1_parse_table():
     nullable_set = NullableSet(Productions)
     first_set = First(Productions, Terminal, nullable_set)
     productions, parse_tab = LR1_parse_table(
-        Productions, first_set, Terminal, nullable_set, start_symbol='<程序>')
+        Productions, first_set, Terminal, nullable_set, start_symbol='Program')
     pickle.dump((productions, dict(parse_tab)),
                 open('./data/LR1_parse_table.dat', 'wb'))
 
