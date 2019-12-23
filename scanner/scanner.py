@@ -99,8 +99,8 @@ def check_and_ignore_comment(q):
     c1=q.popleft()
     c2=q.popleft()
     if c1 != '/' or c2 != '*':
-        q.insert(0, c1)
         q.insert(0, c2)
+        q.insert(0, c1)
         return -1
 
     line_n=0
